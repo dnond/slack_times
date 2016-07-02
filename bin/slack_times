@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'slack_times'
+
+message = ARGV[0] || ''
+if message == ''
+  puts 'input text("." to post):'
+  while str = STDIN.gets
+    break if str.chomp == "."
+    message.concat str
+  end
+end
+
+puts 'NOW POSTING TO SLACK!!'
+puts SlackTimes::Chat.new.post message
+
