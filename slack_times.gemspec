@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'post one line message to slack'
   spec.description   = 'post one line message to slack'
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/dnond/slack_times"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
@@ -23,8 +23,8 @@ Gem::Specification.new do |spec|
   end
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.bindir        = "bin"
+  spec.executables   = ['slack_times']
   spec.require_paths = ["lib"]
 
   spec.add_dependency "slack-api"
