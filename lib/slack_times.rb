@@ -12,7 +12,6 @@ module SlackTimes
     def post(message)
       return 'no message!' if message.nil?
       return 'no channel!' if channel.nil?
-      # binding.pry
       Slack.chat_postMessage post_options.merge(text: message, channel: channel)
     end
 
