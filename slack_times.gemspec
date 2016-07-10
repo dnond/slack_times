@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'slack_times/version'
+# require 'slack_times/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "slack_times"
-  spec.version       = SlackTimes::VERSION
+  spec.version       = '0.1'
   spec.authors       = ["dnond"]
   spec.email         = ["tarosuk@gmail.com"]
 
